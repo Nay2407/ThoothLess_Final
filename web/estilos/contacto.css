@@ -1,0 +1,85 @@
+
+/*AQUI LOS GLBOOS DE TEXTO*/
+
+.formulario {
+
+    margin: 5px auto;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Color de texto */
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Borde sólido */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo */
+    color: #555; /* Color del texto del campo */
+    transition: border-color 0.3s ease; /* Transición suave para el borde */
+}
+
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none; /* Eliminar contorno al hacer foco */
+    border-color: #66afe9; /* Cambiar color del borde al hacer foco */
+}
+
+/* Estilos para agrupar los campos de celular y especialidad */
+.input-group {
+    display: flex;
+}
+
+.campo-mitad {
+    flex: 10; /* Que cada campo ocupe la mitad del espacio disponible */
+    margin-right: 10px; /* Espacio entre los campos */
+}
+
+.campo-mitad:last-child {
+    margin-right: 0; /* Eliminar margen derecho del último campo */
+}
+
+
+iframe {
+    float: right; 
+    padding: 15px;/* Alinea el iframe a la derecha /
+    border: 0; / Elimina el borde por defecto */
+}
+.formulario {
+    width: 300px;
+    /* Ajusta el ancho según tu diseño */
+    margin: 0;
+    /* Elimina el margen para pegar el formulario a la izquierda */
+    padding: 10px;
+    /* Añade espacio interno al formulario */
+    border: 1px solid #ccc;
+    /* Añade un borde para mejor visualización */
+}
+
+.campo {
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    margin-bottom: 10px;
+    /* Espacio entre campos */
+}
+
+.campo input {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    box-sizing: border-box;
+    /* Incluye padding y borde en el ancho */
+    padding: 5px;
+    /* Espacio interno para que no esté pegado al borde */
+}
+

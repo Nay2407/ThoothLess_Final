@@ -1,0 +1,29 @@
+.info{
+    display: flex;
+    padding: 5% 10%;
+    align-content: center;
+    justify-content: space-around;
+}
+body{
+    display: flex;
+}
+.dash{
+    margin: 40px;
+}
+.ctn{
+    margin: 20px;
+}
+.but {
+    margin: 50px;
+    padding: 50px;
+    .btn {
+        background-color: #032A38;
+        color: white;
+    }
+}
+.container{
+    padding: 0px 100px;
+}
+.cita{
+    padding: 20px 80px;
+}

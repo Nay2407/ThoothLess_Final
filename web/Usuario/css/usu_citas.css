@@ -1,0 +1,44 @@
+.tarjet {
+    background: #c8dadf;
+    border-radius: 50px;
+    padding: 2%;
+}
+
+.container-fluid {
+    padding: 50px 100px;
+
+    h1 {
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+
+}
+
+.ver {
+    background-color: #032A38;
+    color: white;
+
+    .a:active {
+        transition: none;
+    }
+
+
+}
+.buta{
+    margin: 30px;
+}
+
+.but {
+    margin: 50px;
+    padding: 50px;
+    .btn {
+        background-color: #032A38;
+        color: white;
+
+    }
+}
+
+a {
+    text-decoration: none;
+}

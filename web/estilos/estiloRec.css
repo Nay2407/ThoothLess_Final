@@ -1,0 +1,45 @@
+body { 
+background-color: #a7d8f0; /* Fondo celeste más vivo */
+  }
+  
+  .logo {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+  
+  .card {
+    margin-top: 50px;
+  }
+  
+  .service-title:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .badge {
+    cursor: pointer;
+  }
+  
+  .badge-success:hover {
+    background-color: #28a745;
+  }
+  
+  .badge-danger:hover {
+    background-color: #dc3545;
+  }
+  
+  .form-check-inline {
+    margin-left: 10px;
+  }

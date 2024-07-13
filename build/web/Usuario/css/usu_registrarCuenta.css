@@ -1,0 +1,49 @@
+body {
+    background-color: #89CFF0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* Ajusta la altura al 100% de la vista del navegador */
+}
+
+.footer {
+    background-color: #032A38; 
+    height: 100px; /* Altura del pie de página */
+    width: 100%; /* Ancho del pie de página */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px); /* Ajusta la altura al 100% de la vista del navegador menos la altura del pie de página */
+}
+
+.container {
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 30px;
+}
+.but {
+    margin-top: 20px;
+}
+
+.part_sup {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+img {
+    max-width: 100px; /* Ajusta según sea necesario */
+}
+
+.row {
+    align-items: center; /* Alinea los elementos a la línea base del texto */
+}
+
+.label-tipo-doc {
+    margin-right: 10px; /* Ajusta según sea necesario */
+}

@@ -1,0 +1,57 @@
+body {
+    background: #fff;
+    text-align: center;
+
+}
+.tooth {
+    cursor: pointer;
+}
+.fil2 {fill: #fafafa}
+    .fil0 {fill: #fafafa}
+    .fil1 {
+        fill: #323232;
+        fill-rule:nonzero
+    }
+    
+    .tooth:hover .fil0,
+    .tooth.active .fil0 {
+        fill: #17a1f4;
+    }	
+
+.tooth-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.tooth-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110px;
+    height: 40px;
+    margin: -20px 0 0 -50px;
+    padding: 0 20px;
+    text-align: left;
+    font: normal 14px/40px Arial;
+    color: #fff;
+    border-radius: 20px;
+    background: #1da1f2;
+    cursor: pointer;
+    -webkit-transition: all ease-out .3s;
+    -o-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.tooth-number.disabled {
+    width: 40px;
+    font-size: 30px;
+    padding: 0 12px;
+    margin-left: -20px;
+    -webkit-transform: rotate(-270deg);
+    -moz-transform: rotate(-270deg);
+    transform: rotate(-270deg);
+}

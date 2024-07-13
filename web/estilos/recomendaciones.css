@@ -1,0 +1,25 @@
+.cuadro2 {
+    margin: auto;
+    display: flex;
+    text-align: left;
+}
+
+.trescuartos {
+    width: 80%;
+    /*padding: 100px 100px 100px 200px;*/
+    text-align: justify;
+    padding-left: 20px;
+}
+
+.espaciadoderecho{
+    padding-right: 40px;
+}
+.espaciadoderecho2{
+    padding-right: 190px;
+}
+.info{
+    display: flex;
+    padding: 5% 10%;
+    align-content: center;
+    justify-content: space-around;
+}

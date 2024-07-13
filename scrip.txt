@@ -1,0 +1,269 @@
+
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+
+DROP SCHEMA IF EXISTS `consultorio` ;
+
+
+CREATE SCHEMA IF NOT EXISTS `consultorio` DEFAULT CHARACTER SET utf8 ;
+USE `consultorio` ;
+
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`PERSONA` (
+  `idPersona` INT  auto_increment NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellido` VARCHAR(45) NOT NULL,
+  `fecNac` DATE NOT NULL,
+  `genero` VARCHAR(1) NOT NULL,
+  `direccion` VARCHAR(150) NOT NULL,
+  `telefono` VARCHAR(9) NOT NULL,
+  `correo` VARCHAR(100) NOT NULL,
+  `tipoDoc` VARCHAR(40) NOT NULL,
+  `numDoc` VARCHAR(20) NOT NULL,
+  `rol` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`idPersona`))
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`PACIENTE` (
+  `idPaciente` INT auto_increment NOT NULL,
+  `usuario` VARCHAR(45) NULL,
+  `contraseña` VARCHAR(45) NULL,
+  `PERSONA_idPersona` INT NOT NULL,
+  PRIMARY KEY (`idPaciente`),
+  CONSTRAINT `fk_PACIENTE_PERSONA1`
+    FOREIGN KEY (`PERSONA_idPersona`)
+    REFERENCES `consultorio`.`PERSONA` (`idPersona`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`ADMINISTRADOR` (
+  `idAdministrador` INT auto_increment NOT NULL,
+  `usuario` VARCHAR(45) NULL,
+  `contraseña` VARCHAR(45) NULL,
+  `PERSONA_idPersona` INT NOT NULL,
+  PRIMARY KEY (`idAdministrador`),
+  CONSTRAINT `fk_ADMINISTRADOR_PERSONA1`
+    FOREIGN KEY (`PERSONA_idPersona`)
+    REFERENCES `consultorio`.`PERSONA` (`idPersona`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_PACIENTE_PERSONA1_idx` ON `consultorio`.`PACIENTE` (`PERSONA_idPersona` ASC) VISIBLE;
+
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`DENTISTA` (
+  `idDENTISTA` INT auto_increment NOT NULL,
+  `horarioT` VARCHAR(45) NOT NULL,
+  `usuario` VARCHAR(45) NOT NULL,
+  `contraseña` VARCHAR(45) NOT NULL,
+  `PERSONA_idPersona` INT NOT NULL,
+  PRIMARY KEY (`idDENTISTA`),
+  CONSTRAINT `fk_DENTISTA_PERSONA1`
+    FOREIGN KEY (`PERSONA_idPersona`)
+    REFERENCES `consultorio`.`PERSONA` (`idPersona`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_DENTISTA_PERSONA1_idx` ON `consultorio`.`DENTISTA` (`PERSONA_idPersona` ASC) VISIBLE;
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`HISTORIAL_MEDICO` (
+  `idHISTORIAL_MEDICO`  INT auto_increment NOT NULL,
+  `PACIENTE_idPaciente` INT NOT NULL,
+  `fechaCreacion` DATE NOT NULL,
+  `descripcion` VARCHAR(45) NOT NULL,
+  `alergias` VARCHAR(45) NULL,
+  PRIMARY KEY (`idHISTORIAL_MEDICO`, `PACIENTE_idPaciente`),
+  CONSTRAINT `fk_HISTORIAL_MEDICO_PACIENTE1`
+    FOREIGN KEY (`PACIENTE_idPaciente`)
+    REFERENCES `consultorio`.`PACIENTE` (`idPaciente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_HISTORIAL_MEDICO_PACIENTE1_idx` ON `consultorio`.`HISTORIAL_MEDICO` (`PACIENTE_idPaciente` ASC) VISIBLE;
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`TRATAMIENTO` (
+  `idTRATAMIENTO` INT auto_increment NOT NULL,
+  `idHistorialMedico` INT NOT NULL,
+  `descripcion` VARCHAR(45) NOT NULL,
+  `fechaInicio` DATE NOT NULL,
+  `fechaFinal` DATE NOT NULL,
+  PRIMARY KEY (`idTRATAMIENTO`, `idHistorialMedico`),
+  CONSTRAINT `fk_TRATAMIENTO_HISTORIAL_MEDICO1`
+    FOREIGN KEY (`idHistorialMedico`)
+    REFERENCES `consultorio`.`HISTORIAL_MEDICO` (`idHISTORIAL_MEDICO`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_TRATAMIENTO_HISTORIAL_MEDICO1_idx` ON `consultorio`.`TRATAMIENTO` (`idHistorialMedico` ASC) VISIBLE;
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`RECEPCIONISTA` (
+  `idRECEPCIONISTA` INT auto_increment NOT NULL,
+  `horarioT` VARCHAR(45) NOT NULL,
+  `usuario` VARCHAR(45) NOT NULL,
+  `contraseña` VARCHAR(45) NOT NULL,
+  `PERSONA_idPersona` INT NOT NULL,
+  PRIMARY KEY (`idRECEPCIONISTA`),
+  CONSTRAINT `fk_RECEPCIONISTA_PERSONA1`
+    FOREIGN KEY (`PERSONA_idPersona`)
+    REFERENCES `consultorio`.`PERSONA` (`idPersona`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_RECEPCIONISTA_PERSONA1_idx` ON `consultorio`.`RECEPCIONISTA` (`PERSONA_idPersona` ASC) VISIBLE;
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`ESPECIALIDAD` (
+  `idESPECIALIDAD` INT auto_increment NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `descripcion` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idESPECIALIDAD`))
+ENGINE = InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`MAQUINA` (
+  `idMAQUINA` INT auto_increment NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  `proveedor` VARCHAR(45)  NULL,
+   `garantia` VARCHAR(45)  NULL,
+    `estado` VARCHAR(45)  NULL,
+  
+  PRIMARY KEY (`idMAQUINA`))
+ENGINE = InnoDB;
+
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`CITA` (
+  `idCITA` INT auto_increment NOT NULL,
+  `PACIENTE_idPaciente` INT NOT NULL,
+  `RECEPCIONISTA_idRECEPCIONISTA` INT NOT NULL,
+  `DENTISTA_idDENTISTA` INT NOT NULL,
+  `ESPECIALIDAD_idESPECIALIDAD` INT NOT NULL,
+  `TRATAMIENTO_idTRATAMIENTO` INT NULL,
+  `hora` VARCHAR(45) NOT NULL,
+  `descripcion` VARCHAR(600) NOT NULL,
+  `fecha` TIME NOT NULL,
+  `estado` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`idCITA`, `PACIENTE_idPaciente`, `RECEPCIONISTA_idRECEPCIONISTA`, `DENTISTA_idDENTISTA`, `ESPECIALIDAD_idESPECIALIDAD`),
+  CONSTRAINT `fk_CITA_TRATAMIENTO1`
+    FOREIGN KEY (`TRATAMIENTO_idTRATAMIENTO`)
+    REFERENCES `consultorio`.`TRATAMIENTO` (`idTRATAMIENTO`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_CITA_RECEPCIONISTA1`
+    FOREIGN KEY (`RECEPCIONISTA_idRECEPCIONISTA`)
+    REFERENCES `consultorio`.`RECEPCIONISTA` (`idRECEPCIONISTA`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_CITA_PACIENTE1`
+    FOREIGN KEY (`PACIENTE_idPaciente`)
+    REFERENCES `consultorio`.`PACIENTE` (`idPaciente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_CITA_DENTISTA1`
+    FOREIGN KEY (`DENTISTA_idDENTISTA`)
+    REFERENCES `consultorio`.`DENTISTA` (`idDENTISTA`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_CITA_ESPECIALIDAD1`
+    FOREIGN KEY (`ESPECIALIDAD_idESPECIALIDAD`)
+    REFERENCES `consultorio`.`ESPECIALIDAD` (`idESPECIALIDAD`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_CITA_TRATAMIENTO1_idx` ON `consultorio`.`CITA` (`TRATAMIENTO_idTRATAMIENTO` ASC) VISIBLE;
+
+CREATE INDEX `fk_CITA_RECEPCIONISTA1_idx` ON `consultorio`.`CITA` (`RECEPCIONISTA_idRECEPCIONISTA` ASC) VISIBLE;
+
+CREATE INDEX `fk_CITA_PACIENTE1_idx` ON `consultorio`.`CITA` (`PACIENTE_idPaciente` ASC) VISIBLE;
+
+CREATE INDEX `fk_CITA_DENTISTA1_idx` ON `consultorio`.`CITA` (`DENTISTA_idDENTISTA` ASC) VISIBLE;
+
+CREATE INDEX `fk_CITA_ESPECIALIDAD1_idx` ON `consultorio`.`CITA` (`ESPECIALIDAD_idESPECIALIDAD` ASC) VISIBLE;
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`Procedimiento` (
+  `idProcedimineto` INT auto_increment NOT NULL,
+  `CITA_idCITA` INT NOT NULL,
+  `descripcion` VARCHAR(100) NOT NULL,
+  `costo` DOUBLE NOT NULL,
+  `duracion` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idProcedimineto`, `CITA_idCITA`),
+  CONSTRAINT `fk_Procedimiento_CITA1`
+    FOREIGN KEY (`CITA_idCITA`)
+    REFERENCES `consultorio`.`CITA` (`idCITA`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_Procedimiento_CITA1_idx` ON `consultorio`.`Procedimiento` (`CITA_idCITA` ASC) VISIBLE;
+
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`RECETA` (
+  `idRECETA` INT auto_increment NOT NULL,
+  `fecha` DATE NOT NULL,
+  `CITA_idCITA` INT NOT NULL,
+  PRIMARY KEY (`idRECETA`, `CITA_idCITA`),
+  CONSTRAINT `fk_RECETA_CITA1`
+    FOREIGN KEY (`CITA_idCITA`)
+    REFERENCES `consultorio`.`CITA` (`idCITA`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_RECETA_CITA1_idx` ON `consultorio`.`RECETA` (`CITA_idCITA` ASC) VISIBLE;
+
+
+CREATE TABLE IF NOT EXISTS `consultorio`.`DETALLE_RECETA` (
+  `idDETALLE_RECETA` INT NOT NULL,
+  `RECETA_idRECETA` INT NOT NULL,
+  `cantidad` INT NOT NULL,
+  `dosificacion` VARCHAR(45) NOT NULL,
+  `medicamento` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idDETALLE_RECETA`, `RECETA_idRECETA`),
+  CONSTRAINT `fk_RECETA_has_MEDICAMENTO_RECETA1`
+    FOREIGN KEY (`RECETA_idRECETA`)
+    REFERENCES `consultorio`.`RECETA` (`idRECETA`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE INDEX `fk_RECETA_has_MEDICAMENTO_RECETA1_idx` ON `consultorio`.`DETALLE_RECETA` (`RECETA_idRECETA` ASC) VISIBLE;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+use consultorio;
+insert into persona(nombre,apellido,fecNac,genero,direccion,telefono,correo,tipoDoc,numDoc,rol) values("Co","Pelado","2000/05/18","M","DSA","656656","","","","administrador");
+insert into persona(idPersona,nombre,apellido,fecNac,genero,direccion,telefono,correo,tipoDoc,numDoc,rol) values(4,"Corintio","Pelado","2000/05/18","M","DSA","656656","","","","doctor");
+insert into paciente values(0,"usu","123456","0");
+
+insert into persona(idPersona,nombre,apellido,fecNac,genero,direccion,telefono,correo,tipoDoc,numDoc,rol) values(2,"Corintio","Pelado","2000/05/18","M","DSA","656656","","","","administrador");
+delete from persona where idPersona=4;
+
+insert into administrador(usuario,contraseña,PERSONA_idPersona) values ("admin","1234",1)
+
+select * from persona
+select * from administrador
+where idPersona=0
+
