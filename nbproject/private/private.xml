@@ -3,21 +3,47 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/web/cta_listar.jsp</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/web/pct_nuevo.jsp</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/web/ad_empleados.jsp</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/src/java/controladores/ctrlMaquina.java</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/web/ad_paciente.jsp</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/web/cta_nuevo.jsp</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/src/java/controladores/ctrlPaciente.java</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/web/pct_listar.jsp</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/web/pct_menu.jsp</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/src/java/modelos/Empleado.java</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/web/pct_citas.jsp</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/src/java/controladores/ctrlCitas.java</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/src/java/controladores/ctrlEmpleado.java</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/src/java/modelos/Persona.java</file>
-            <file>file:/C:/Users/User/Downloads/ToothLess_01_07/ToothLess/src/java/modelos/Citas.java</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/rec_index.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/cta_listarRec.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/src/java/modelos/DetalleReceta.java</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_ver1.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/doc_citas.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/ad_index.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_listarDoc.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_editar_1.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_index1.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/rec_pacientes.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/src/java/ctrlRecetas.java</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/rec_menu.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/doc_menu.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/cta_listarDoc.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_menu.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/ad_empleados.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/login.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_verDoc.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/rta_nuevo.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/doc_index.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/cta_nuevoRec.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_ver.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/src/java/modelos/Empleado.java</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/src/java/controladores/ctrlPaciente.java</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_perfil.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/mqa_listar.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/usu_listar.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_listar.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_editar.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/src/java/modelos/Citas.java</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_listarRec.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_editper.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/src/java/modelos/Diagnostico.java</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_citas.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/doc_diagnostico.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_eliminar.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/rec_solicitudcitas.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_recetas.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/pct_index.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/doc_paciente.jsp</file>
+            <file>file:/C:/Users/User/Desktop/Final/ToothLess/web/cta_listar.jsp</file>
         </group>
     </open-files>
 </project-private>

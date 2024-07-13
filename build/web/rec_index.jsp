@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <%@include file="rec_referencias.jsp" %>
-                <link rel="stylesheet" href="/estilos/estiloRec.css">
+        <link rel="stylesheet" href="/estilos/estiloRec.css">
 
         <title>Pagina Principal</title>
     </head>
@@ -43,7 +43,7 @@
                     <%                } else if (pagina.equals("rec_index1")) {
                     %>
                     <%@include file="rec_index1.jsp" %>
-                    <%                  }else if (pagina.equals("rec_pacientes")) {
+                    <%                  } else if (pagina.equals("rec_pacientes")) {
                     %>
                     <%@include file="rec_pacientes.jsp" %>
                     <%} else if (pagina.equals("rec_index1")) {
@@ -55,18 +55,21 @@
                     <%} else if (pagina.equals("pct_listarRec")) {
                     %>
                     <%@include file="pct_listarRec.jsp" %> 
-                    <%}else if (pagina.equals("pct_verRec")) {
+                    <%} else if (pagina.equals("pct_verRec")) {
                     %>
                     <%@include file="pct_verRec.jsp" %> 
-                    <%}else if (pagina.equals("pct_eliminarRec")) {
+                    <%} else if (pagina.equals("pct_eliminarRec")) {
                     %>
                     <%@include file="pct_eliminarRec.jsp" %> 
-                    <%}else if (pagina.equals("pct_editarRec")) {
+                    <%} else if (pagina.equals("pct_editarRec")) {
                     %>
                     <%@include file="pct_editarRec.jsp" %> 
+                    <%} else if (pagina.equals("cta_listarRec")) {
+                    %>
+                    <%@include file="cta_listarRec.jsp" %> 
                     <%}
                     %>
-                    
+
                 </div>
             </div>
     </body>
