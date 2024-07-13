@@ -1,0 +1,50 @@
+body {
+    border-color: #032A38;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #032A38;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+/* Estilo para el botón */
+button[type="submit"] {
+    background-color: #032A38; /* Color de fondo azul */
+    color: #ffffff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Padding interno */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor apuntador */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo para el botón al pasar el cursor */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Color de fondo azul más oscuro al pasar el cursor */
+}

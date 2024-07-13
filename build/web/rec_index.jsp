@@ -52,7 +52,19 @@
                     <%} else if (pagina.equals("rec_horarios")) {
                     %>
                     <%@include file="rec_horarios.jsp" %> 
-                    <%} 
+                    <%} else if (pagina.equals("pct_listarRec")) {
+                    %>
+                    <%@include file="pct_listarRec.jsp" %> 
+                    <%}else if (pagina.equals("pct_verRec")) {
+                    %>
+                    <%@include file="pct_verRec.jsp" %> 
+                    <%}else if (pagina.equals("pct_eliminarRec")) {
+                    %>
+                    <%@include file="pct_eliminarRec.jsp" %> 
+                    <%}else if (pagina.equals("pct_editarRec")) {
+                    %>
+                    <%@include file="pct_editarRec.jsp" %> 
+                    <%}
                     %>
                     
                 </div>
