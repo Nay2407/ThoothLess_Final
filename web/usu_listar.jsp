@@ -62,9 +62,9 @@
             </td>
             
            
-            <td><a href="ad_empleados.jsp?pagina=usu_ver&idEmpleado=<%= ux.getIdEmpleado()%>" class="btn" style="background-color: #032A38; color: white">ver</a></td>
-            <td><a href="ad_empleados.jsp?pagina=usu_editar&idEmpleado=<%= ux.getIdEmpleado()%>" class="btn" style="background-color: #032A38; color: white">Editar</a></td>
-            <td><a href="ad_empleados.jsp?pagina=usu_eliminar&idEmpleado=<%= ux.getIdEmpleado()%>" class="btn" style="background-color: #032A38; color: white">Eliminar</a></td>
+            <td><a href="ad_index.jsp?pagina=usu_ver&idEmpleado=<%= ux.getIdEmpleado()%>" class="btn" style="background-color: #032A38; color: white">ver</a></td>
+            <td><a href="ad_index.jsp?pagina=usu_editar&idEmpleado=<%= ux.getIdEmpleado()%>" class="btn" style="background-color: #032A38; color: white">Editar</a></td>
+            <td><a href="ad_index.jsp?pagina=usu_eliminar&idEmpleado=<%= ux.getIdEmpleado()%>" class="btn" style="background-color: #032A38; color: white">Eliminar</a></td>
         </tr>
         <%
             }

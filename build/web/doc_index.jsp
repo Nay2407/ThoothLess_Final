@@ -47,8 +47,19 @@
                     <%                  }else if (pagina.equals("doc_referencias")) {
                     %>
                     <%@include file="doc_referencias.jsp" %>
-                    <%} 
+                    <%} else if (pagina.equals("cta_listarDoc")) {
                     %>
+                    <%@include file="cta_listarDoc.jsp" %>
+                    <%} else if (pagina.equals("pct_verDoc")) {
+                    %>
+                    <%@include file="pct_verDoc.jsp" %>
+                    <%} else if (pagina.equals("pct_listarDoc")) {
+                    %>
+                    <%@include file="pct_listarDoc.jsp" %>
+                    <%}
+                    
+                    %>
+
                     
                 </div>
             </div>

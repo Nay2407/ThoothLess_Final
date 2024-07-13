@@ -14,6 +14,7 @@
             });
         </script>
     </head>
+    
     <body>
         <%@include file="pct_menu.jsp"%>
         <div style="margin-left: 17.5rem;">
@@ -45,23 +46,23 @@
                     <%                } else if (pagina.equals("usu_eliminar")) {
                     %> 
                     <%@include file="usu_eliminar.jsp" %>
-                    <%                } else if (pagina.equals("pct_citas")) {
+                    <%                } else if (pagina.equals("pct_listarDoc")) {
                     %> 
-                    <%@include file="pct_citas.jsp" %>
+                    <%@include file="pct_listarDoc.jsp" %>
                     <%
                     } else if (pagina.equals("pct_nuevo")) {
                     %>
                     <%@include file="pct_nuevo.jsp" %>
                     <%
-                    } else if (pagina.equals("pct_ver")) {
+                    } else if (pagina.equals("pct_ver1")) {
                     %>
-                    <%@include file="pct_ver.jsp" %>
+                    <%@include file="pct_ver1.jsp" %>
                     <%                } else if (pagina.equals("pct_eliminar")) {
                     %>
                     <%@include file="pct_eliminar.jsp" %>
-                    <%                } else if (pagina.equals("pct_editar")) {
+                    <%                } else if (pagina.equals("pct_editar_1")) {
                     %>
-                    <%@include file="pct_editar.jsp" %>
+                    <%@include file="pct_editar_1.jsp" %>
                     <%                } else if (pagina.equals("pct_recetas")) {
                     %>
                     <%@include file="pct_recetas.jsp" %>
@@ -82,6 +83,9 @@
                     <%                    }else if (pagina.equals("pct_index1")) {
                     %>
                     <%@include file="pct_index1.jsp" %>
+                    <%  }else if (pagina.equals("pct_verDoc")) {
+                    %>
+                    <%@include file="pct_verDoc.jsp" %>
                     <%  }
                     %>
                 </div>

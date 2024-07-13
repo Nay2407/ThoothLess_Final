@@ -74,7 +74,7 @@ public class ctrlPaciente extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Paciente pct = new Paciente();
-        boolean log = false;
+        int log = -1;
         
         int idPaciente = -1;
         String usr = "";
@@ -143,7 +143,8 @@ public class ctrlPaciente extends HttpServlet {
 
         if (pag.equals("autentica")) {
             log = pct.getLogueado(usr, psw);
-            if (log=true) {
+            if (log > 0) {
+                request.setAttribute("idPaciente", log);
                 request.getRequestDispatcher("pct_index.jsp").forward(request, response);
             } else {
                 request.getRequestDispatcher("noautorizado.jsp").forward(request, response);

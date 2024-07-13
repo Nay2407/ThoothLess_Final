@@ -45,9 +45,9 @@
             <td>
                 <%= mq.getEstado()%>
             </td>
-            <td><a href="ad_inventario.jsp?pagina=mqa_ver&idMaquina=<%= mq.getIdMaquina()%>" class="btn" style="background-color: #032A38; color: white">ver</a></td>
-            <td><a href="ad_inventario.jsp?pagina=mqa_editar&idMaquina=<%= mq.getIdMaquina()%>" class="btn" style="background-color: #032A38; color: white">Editar</a></td>
-            <td><a href="ad_inventario.jsp?pagina=mqa_eliminar&idMaquina=<%= mq.getIdMaquina()%>" class="btn" style="background-color: #032A38; color: white">Eliminar</a></td>
+            <td><a href="ad_index.jsp?pagina=mqa_ver&idMaquina=<%= mq.getIdMaquina()%>" class="btn" style="background-color: #032A38; color: white">ver</a></td>
+            <td><a href="ad_index.jsp?pagina=mqa_editar&idMaquina=<%= mq.getIdMaquina()%>" class="btn" style="background-color: #032A38; color: white">Editar</a></td>
+            <td><a href="ad_index.jsp?pagina=mqa_eliminar&idMaquina=<%= mq.getIdMaquina()%>" class="btn" style="background-color: #032A38; color: white">Eliminar</a></td>
         </tr>
         <%
             }

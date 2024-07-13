@@ -57,9 +57,9 @@
             </td>
             
            
-            <td><a href="ad_paciente.jsp?pagina=pct_ver&idPaciente=<%= pcta.getIdPaciente()%>" class="btn" style="background-color: #032A38; color: white">ver</a></td>
-            <td><a href="ad_paciente.jsp?pagina=pct_editar&idPaciente=<%= pcta.getIdPaciente()%>" class="btn" style="background-color: #032A38; color: white">Editar</a></td>
-            <td><a href="ad_paciente.jsp?pagina=pct_eliminar&idPaciente=<%= pcta.getIdPaciente()%>" class="btn" style="background-color: #032A38; color: white">Eliminar</a></td>
+            <td><a href="ad_index.jsp?pagina=pct_ver&idPaciente=<%= pcta.getIdPaciente()%>" class="btn" style="background-color: #032A38; color: white">ver</a></td>
+            <td><a href="ad_index.jsp?pagina=pct_editar&idPaciente=<%= pcta.getIdPaciente()%>" class="btn" style="background-color: #032A38; color: white">Editar</a></td>
+            <td><a href="ad_index.jsp?pagina=pct_eliminar&idPaciente=<%= pcta.getIdPaciente()%>" class="btn" style="background-color: #032A38; color: white">Eliminar</a></td>
         </tr>
         <%
             }
