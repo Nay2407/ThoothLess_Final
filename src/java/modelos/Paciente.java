@@ -31,8 +31,9 @@ public class Paciente {
             this.contraseña = null;
             this.idPersona = 0;
     }
-    public boolean getLogueado(String usr, String psw) {
+    public int getLogueado(String usr, String psw) {
         boolean flag = false;
+        Paciente pct = new Paciente();
         try {
             Conexion c = new Conexion();
             Connection cnx = c.conecta();
@@ -42,12 +43,12 @@ public class Paciente {
             Statement sentencia = cnx.createStatement();
             ResultSet resultado = sentencia.executeQuery(consulta);
             while(resultado.next()) {
-                flag=true;
+                pct.idPaciente = resultado.getInt("idPaciente");
             }        
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return flag;
+        return pct.idPaciente;
     }
     
     public LinkedList<Paciente> listar() {        

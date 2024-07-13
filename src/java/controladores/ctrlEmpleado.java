@@ -76,7 +76,7 @@ public class ctrlEmpleado extends HttpServlet {
         Empleado emp = new Empleado();
         Paciente pct = new Paciente();
         int log = -1;
-        boolean log2 = false;
+        int log2 = -1;
 
         int idEmpleado = -1;
         String rol = "";
@@ -165,7 +165,8 @@ public class ctrlEmpleado extends HttpServlet {
             if (log == 3) {
                 request.getRequestDispatcher("rec_index.jsp").forward(request, response);
             }
-            if (log2) {
+            if (log2 > 0) {
+                request.setAttribute("idPaciente", log2);
                 request.getRequestDispatcher("pct_index.jsp").forward(request, response);
             } else {
                 // Establecer un atributo indicando que el login falló

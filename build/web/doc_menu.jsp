@@ -23,7 +23,7 @@
         
         <div class="enlace">
             <i class="fa-solid fa-notes-medical"></i>
-            <a href="doc_index.jsp?pagina=doc_citas">
+            <a href="doc_index.jsp?pagina=cta_listarDoc">
             <span>Citas</span></a>
         </div>
 
@@ -35,7 +35,7 @@
 
         <div class="enlace">
             <i class="fa-solid fa-clipboard-user"></i>
-            <a href="doc_index.jsp?pagina=doc_paciente"><!-- comment -->
+            <a href="doc_index.jsp?pagina=pct_listarDoc"><!-- comment -->
             <span>Pacientes</span></a>
         </div>
         

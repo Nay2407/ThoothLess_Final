@@ -64,7 +64,6 @@
                 <%= dr.getDosificacion()%>
             </td>
             <td>
-
                 <%= dr.getMedicamento()%>
             </td>
         </tr>

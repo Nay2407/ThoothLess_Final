@@ -1,4 +1,6 @@
-
+<%
+        Integer idPaciente = (Integer) request.getAttribute("idPaciente");
+    %>
 <div id="menu-dashboard" class="menu-dashboard">
 
     <div class="top-menu">
@@ -23,7 +25,7 @@
         
         <div class="enlace">
             <i class="fa-solid fa-user"></i>
-            <a href="pct_index.jsp?pagina=pct_perfil">
+            <a href="pct_index.jsp?pagina=pct_ver1&idPaciente=<%= idPaciente %>">
             <span>Mi Perfil</span></a>
         </div>
 

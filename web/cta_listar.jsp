@@ -74,9 +74,9 @@
             </td>
             
            
-            <td><a href="pct_cita.jsp?pagina=cta_ver&idPaciente=<%= ctaa.getPACIENTE_idPaciente()%>" class="btn" style="background-color: #032A38; color: white">ver</a></td>
-            <td><a href="pct_cita.jsp?pagina=cta_editar&idPaciente=<%= ctaa.getPACIENTE_idPaciente()%>" class="btn" style="background-color: #032A38; color: white">Editar</a></td>
-            <td><a href="pct_cita.jsp?pagina=cta_eliminar&idPaciente=<%= ctaa.getPACIENTE_idPaciente()%>" class="btn" style="background-color: #032A38; color: white">Eliminar</a></td>
+            <td><a href="pct_index.jsp?pagina=cta_ver&idPaciente=<%= ctaa.getPACIENTE_idPaciente()%>" class="btn" style="background-color: #032A38; color: white">ver</a></td>
+            <td><a href="pct_index.jsp?pagina=cta_editar&idPaciente=<%= ctaa.getPACIENTE_idPaciente()%>" class="btn" style="background-color: #032A38; color: white">Editar</a></td>
+            <td><a href="pct_index.jsp?pagina=cta_eliminar&idPaciente=<%= ctaa.getPACIENTE_idPaciente()%>" class="btn" style="background-color: #032A38; color: white">Eliminar</a></td>
         </tr>
         <%
             }
